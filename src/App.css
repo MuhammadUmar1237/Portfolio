@@ -1,0 +1,1392 @@
+/* =========================================
+   MAIN PORTFOLIO
+========================================= */
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-home {
+  --accent: #ff5722;
+
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background: #252527;
+  color: #f8f8f8;
+
+  font-family: "Courier New", Courier, monospace;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.portfolio-home *,
+.portfolio-home *::before,
+.portfolio-home *::after {
+  box-sizing: border-box;
+}
+
+.portfolio-home a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio-home button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   LIGHT SKIN
+========================================= */
+
+.portfolio-home.light-skin {
+  background: #f4f4f5;
+  color: #252527;
+}
+
+.portfolio-home.light-skin .hero-title {
+  color: #252527;
+}
+
+.portfolio-home.light-skin .hero-description {
+  color: #55555a;
+}
+
+.portfolio-home.light-skin .hero-footer {
+  color: #252527;
+}
+
+.portfolio-home.light-skin .social-links span {
+  color: #252527;
+}
+
+.portfolio-home.light-skin .menu-button {
+  background: #ffffff;
+  border-color: #dddddf;
+}
+
+.portfolio-home.light-skin .menu-button span {
+  background: #252527;
+}
+
+/* Light skin: menu card */
+.portfolio-home.light-skin .side-menu {
+  background: #ffffff;
+  border-color: #dddddf;
+}
+
+.portfolio-home.light-skin .side-menu-nav a {
+  color: #252527;
+}
+
+.portfolio-home.light-skin .side-menu-nav a.active,
+.portfolio-home.light-skin .side-menu-nav a:hover {
+  color: var(--accent);
+}
+
+.portfolio-home.light-skin .close-menu-button span {
+  background: #252527;
+}
+
+
+/* =========================================
+   DOT PATTERN
+========================================= */
+
+.dot-pattern {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 110px;
+  height: 255px;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(circle,
+      var(--accent) 2px,
+      transparent 2.5px);
+
+  background-size: 24px 24px;
+  background-position: 5px 5px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   FLOATING BACKGROUND SHAPES
+========================================= */
+
+.shape {
+  position: absolute;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background: color-mix(in srgb,
+      var(--accent) 12%,
+      transparent);
+
+  animation: floatBottomToTop 8s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+.shape-one {
+  top: -35px;
+  right: 5.5%;
+
+  width: 165px;
+  height: 125px;
+
+  border-radius: 0 0 45px 45px;
+
+  animation-delay: -2s;
+}
+
+.shape-two {
+  top: 46%;
+  left: 40%;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 14px;
+
+  transform: rotate(-5deg);
+
+  animation-delay: -5s;
+}
+
+.shape-three {
+  top: 62%;
+  left: 25%;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 14px;
+
+  transform: rotate(-15deg);
+
+  animation-delay: -1s;
+}
+
+.shape-four {
+  right: 18%;
+  bottom: 11%;
+
+  width: 120px;
+  height: 110px;
+
+  border-radius: 13px;
+
+  transform: rotate(-11deg);
+
+  animation-delay: -4s;
+}
+
+.shape-five {
+  bottom: -65px;
+  left: 34%;
+
+  width: 190px;
+  height: 130px;
+
+  border-radius: 8px;
+
+  transform: rotate(-35deg);
+
+  animation-delay: -6s;
+}
+
+.shape-six {
+  top: 42%;
+  left: 10%;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 5px;
+
+  transform: rotate(45deg);
+
+  animation-delay: -3s;
+}
+
+.shape-seven {
+  right: 34%;
+  bottom: 27%;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 3px;
+
+  transform: rotate(-15deg);
+
+  animation-delay: -7s;
+}
+
+@keyframes floatBottomToTop {
+  0% {
+    transform: translateY(80px);
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translateY(-90px);
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================================
+   TOP RIGHT CONTROLS
+========================================= */
+
+.top-bar {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  z-index: 300;
+
+  display: flex;
+
+  width: 52px;
+
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 50px;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   HAMBURGER MENU BUTTON
+========================================= */
+
+.menu-button {
+  position: relative;
+
+  display: flex;
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid #414145;
+
+  background: #303033;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.menu-button:hover {
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
+}
+
+.menu-button span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #f8f8f8;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* Hamburger -> X */
+
+.menu-button.active span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.active span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================
+   SETTINGS BUTTON
+========================================= */
+
+.settings-button {
+  position: relative;
+
+  display: flex;
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 24px;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #252527;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================
+   OVERLAYS (halka, taake page dikhta rahe)
+========================================= */
+
+.menu-overlay,
+.settings-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 150;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   MENU CARD
+========================================= */
+
+.side-menu {
+  position: fixed;
+
+  top: 25px;
+  right: 90px;
+
+  z-index: 200;
+
+  width: 210px;
+  padding: 14px 0;
+
+  background: #303033;
+  border: 1px solid #414145;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  animation: popIn 0.25s ease;
+}
+
+.close-menu-button {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+}
+
+.close-menu-button span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 18px;
+  height: 2px;
+
+  background: #f8f8f8;
+}
+
+.close-menu-button span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-menu-button span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-menu-button:hover span {
+  background: var(--accent);
+}
+
+
+/* =========================================
+   MENU NAVIGATION
+========================================= */
+
+.side-menu-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-top: 28px;
+}
+
+.side-menu-nav a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 10px 20px;
+
+  color: #f3f3f3;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  transition: color 0.2s ease;
+}
+
+.side-menu-nav a::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 3px;
+  height: 22px;
+
+  background: var(--accent);
+
+  transform: translateY(-50%) scaleY(0);
+
+  transition: transform 0.2s ease;
+}
+
+.side-menu-nav a.active::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.side-menu-nav a.active,
+.side-menu-nav a:hover {
+  color: var(--accent);
+}
+
+.side-menu-nav i {
+  width: 18px;
+
+  color: inherit;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SETTINGS PANEL (white card)
+========================================= */
+
+.settings-panel {
+  position: fixed;
+
+  top: 25px;
+  right: 90px;
+
+  z-index: 250;
+
+  width: 240px;
+  padding: 22px 24px 20px;
+
+  background: #ffffff;
+  color: #252527;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  animation: popIn 0.25s ease;
+}
+
+/* Gol close button - corner par bahar nikla hua */
+.settings-close-button {
+  position: absolute;
+
+  top: -16px;
+  left: -16px;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.settings-close-button span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 16px;
+  height: 2px;
+
+  background: #6b6b70;
+}
+
+.settings-close-button span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.settings-close-button span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.settings-close-button:hover span {
+  background: var(--accent);
+}
+
+
+/* =========================================
+   SETTINGS SECTIONS
+========================================= */
+
+.settings-section {
+  padding: 14px 0 18px;
+
+  border-bottom: 1px solid #dcdce0;
+}
+
+.settings-section h3 {
+  margin: 0 0 16px;
+
+  text-align: center;
+
+  color: #252527;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   COLOR SWITCHER
+========================================= */
+
+.color-switcher {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px 6px;
+}
+
+.color-droplet {
+  position: relative;
+
+  width: 26px;
+  height: 26px;
+
+  justify-self: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50% 50% 50% 6px;
+
+  transform: rotate(-45deg);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.color-droplet span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.color-droplet:hover {
+  transform: rotate(-45deg) scale(1.15);
+}
+
+.color-droplet.selected {
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 4px #252527;
+
+  transform: rotate(-45deg) scale(1.05);
+}
+
+
+/* =========================================
+   BODY SKIN
+========================================= */
+
+.body-skin-section {
+  border-bottom: none;
+
+  padding-bottom: 4px;
+}
+
+.skin-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding-left: 14px;
+}
+
+.skin-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #252527;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.skin-option input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.custom-radio {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #77777d;
+
+  border-radius: 50%;
+}
+
+.skin-option.selected .custom-radio {
+  border-color: var(--accent);
+}
+
+.skin-option.selected .custom-radio::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: 1;
+
+  width: calc(100% - 60px);
+
+  max-width: 1200px;
+
+  text-align: center;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.hero-title {
+  margin: 0;
+
+  color: #f8f8f8;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(34px, 5vw, 72px);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -1.5px;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-description {
+  margin: 22px 0 0;
+
+  color: #f0f0f0;
+
+  font-size: clamp(12px, 1.1vw, 17px);
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   MORE ABOUT ME BUTTON
+========================================= */
+
+.more-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  padding: 13px 23px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.more-about-button:hover {
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.hero-footer {
+  position: absolute;
+
+  right: 40px;
+  bottom: 26px;
+  left: 40px;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CONTACT INFO
+========================================= */
+
+.contact-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 6px;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+}
+
+.contact-heading {
+  margin: 0 0 3px;
+
+  color: inherit;
+
+  font-size: 13px;
+}
+
+.contact-info a:first-of-type {
+  color: var(--accent);
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+
+.social-links span {
+  display: inline-flex;
+
+  min-width: 18px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #f3f3f3;
+
+  font-size: 16px;
+
+  cursor: default;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-links span:hover {
+  color: var(--accent);
+
+  transform: translateY(-3px);
+}
+
+.social-links i {
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+
+/* Settings icon: website khulte hi ghoomta rahe */
+.settings-button i {
+  display: inline-block;
+  animation: settings-spin 4s linear infinite;
+}
+
+@keyframes settings-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-button i {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .top-bar {
+    top: 18px;
+    right: 18px;
+
+    width: 46px;
+
+    gap: 8px;
+  }
+
+  .menu-button,
+  .settings-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .side-menu,
+  .settings-panel {
+    top: 18px;
+    right: 78px;
+  }
+
+  .hero-content {
+    width: calc(100% - 35px);
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 9vw, 54px);
+
+    letter-spacing: -1px;
+  }
+
+  /* CHANGED: 12px se 13px (mobile par parhna aasan) */
+  .hero-description {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .more-about-button {
+    margin-top: 28px;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .hero-footer {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    align-items: flex-end;
+  }
+
+  .contact-info {
+    font-size: 11px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-links span {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .top-bar {
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+
+    gap: 7px;
+  }
+
+  .menu-button,
+  .settings-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .side-menu,
+  .settings-panel {
+    top: 14px;
+    right: 70px;
+  }
+
+  .menu-button span {
+    width: 20px;
+  }
+
+  .settings-button {
+    font-size: 16px;
+  }
+
+  /* CHANGED: title phone ki width ke hisaab se barhta/ghat'ta hai,
+     aur naam "Muhammad Umar." hamesha alag line par aata hai */
+  .hero-title {
+    font-size: clamp(28px, 8.5vw, 40px);
+
+    line-height: 1.2;
+  }
+
+  .hero-title span {
+    display: block;
+  }
+
+  /* CHANGED: 11px se 13px */
+  .hero-description {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    padding: 0 6px;
+  }
+
+  /* CHANGED: button thoda bara (tap karna aasan) */
+  .more-about-button {
+    padding: 13px 22px;
+
+    font-size: 14px;
+  }
+
+  /* (footer ki rules neeche "PHONES" section mein shift ho gayi hain) */
+
+  .shape-one {
+    right: -40px;
+  }
+
+  .shape-five {
+    left: 20%;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .shape {
+    animation: none;
+  }
+
+  .menu-overlay,
+  .settings-overlay,
+  .side-menu,
+  .settings-panel {
+    animation: none;
+  }
+
+  .menu-button,
+  .settings-button,
+  .social-links span,
+  .more-about-button {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE FIX
+========================================= */
+
+/* Chhoti width ya kam height: hero aur footer overlap na hon */
+@media (max-width: 768px),
+(max-height: 560px) {
+  .portfolio-home {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: auto;
+    padding: 24px 0;
+  }
+
+  .hero-footer {
+    position: relative;
+    inset: auto;
+    padding: 20px 40px;
+  }
+
+  .contact-info a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Mobile / tablet */
+@media (max-width: 768px) {
+  .portfolio-home {
+    padding-top: 125px;
+    /* top-right buttons ke neeche se content shuru */
+  }
+
+  .settings-button {
+    margin-left: 0;
+    /* icon screen se bahar na nikle */
+  }
+
+  .dot-pattern {
+    width: 70px;
+    height: 150px;
+    opacity: 0.6;
+  }
+
+  .hero-footer {
+    padding: 20px;
+  }
+}
+
+/* Landscape phone: kam height, zyada width */
+@media (min-width: 769px) and (max-height: 560px) {
+  .portfolio-home {
+    padding-top: 24px;
+  }
+
+  .hero-content {
+    width: calc(100% - 220px);
+    /* right wale buttons se door rahe */
+  }
+
+  .top-bar {
+    gap: 14px;
+  }
+}
+
+
+/* =========================================
+   PHONES (600px aur chhoti screens)
+   Footer center mein, ek ke neeche ek
+   (Phones par footer ab neeche wale NEW block se chhupa diya gaya hai)
+========================================= */
+
+@media (max-width: 600px) {
+  .hero-footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 12px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  /* icons thode bare aur tap karne layak */
+  .social-links a {
+    display: inline-flex;
+
+    min-width: 32px;
+    min-height: 32px;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+  }
+}
+
+
+/* Bohat chhoti screens */
+@media (max-width: 380px) {
+  .side-menu {
+    width: 190px;
+  }
+
+  .settings-panel {
+    width: 220px;
+    padding: 20px 18px 18px;
+  }
+
+  /* CHANGED: 26px fixed ki jagah screen ke hisaab se */
+  .hero-title {
+    font-size: clamp(24px, 8vw, 30px);
+  }
+
+  .social-links {
+    gap: 14px;
+  }
+}
+
+
+/* =========================================
+   Bohat hi chhoti screens (Galaxy Fold 280px wagera)
+   Menu aur settings panel screen se bahar na jayein
+========================================= */
+
+@media (max-width: 320px) {
+  .side-menu {
+    width: 170px;
+    right: 62px;
+  }
+
+  .settings-panel {
+    width: 190px;
+    right: 62px;
+    padding: 18px 14px 16px;
+  }
+
+  .color-switcher {
+    gap: 12px 2px;
+  }
+}
+
+
+/* =========================================
+   Landscape phone (width kam, height bhi kam)
+   Itna bara top padding nahi chahiye
+========================================= */
+
+@media (max-width: 768px) and (max-height: 560px) {
+  .portfolio-home {
+    padding-top: 24px;
+  }
+
+  .hero-content {
+    width: calc(100% - 140px);
+    /* right wale buttons se door rahe */
+  }
+}
+
+
+/* =========================================
+   NEW: Footer sirf iPad aur desktop par (768px se upar)
+   Phones par email, phone aur icons chhupe rahenge
+   (isko file ke SABSE AAKHIR mein hi rakho)
+========================================= */
+
+@media (max-width: 767px) {
+  .hero-footer {
+    display: none !important;
+  }
+}

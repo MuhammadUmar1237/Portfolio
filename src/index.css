@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+.contact-info a {
+  overflow-wrap: anywhere;
+}
+
+/* Mobile / tablet */
+@media (max-width: 768px) {
+  .portfolio-home {
+    padding-top: 125px;
+    /* top-right buttons ke neeche se content shuru */
+  }
+
+  .settings-button {
+    margin-left: 0;
+    /* icon screen se bahar na nikle */
+  }
+
+  .dot-pattern {
+    width: 70px;
+    height: 150px;
+    opacity: 0.6;
+  }
+
+  .hero-footer {
+    padding: 20px;
+  }
+}
+
+/* Landscape phone: kam height, zyada width */
+@media (min-width: 769px) and (max-height: 560px) {
+  .portfolio-home {
+    padding-top: 24px;
+  }
+
+  .hero-content {
+    width: calc(100% - 220px);
+    /* right wale buttons se door rahe */
+  }
+
+  .top-bar {
+    gap: 14px;
+  }
+}
+
+/* Bohat chhoti screens */
+@media (max-width: 380px) {
+  .side-menu {
+    width: 190px;
+  }
+
+  .settings-panel {
+    width: 220px;
+    padding: 20px 18px 18px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .social-links {
+    gap: 14px;
+  }
+}
