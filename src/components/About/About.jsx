@@ -5,7 +5,7 @@ const FALLBACK_PHOTO = "https://github.com/MuhammadUmar1237.png";
 const preloadPhoto = new Image();
 preloadPhoto.src = PHOTO_URL;
 
-// CV file ko project ke `public` folder main rakho: public/Muhammad_Umar_Resume.pdf
+
 const CV_URL = "/Muhammad_Umar_Resume.pdf";
 const CV_FILE_NAME = "Muhammad_Umar_Resume.pdf";
 
@@ -18,11 +18,8 @@ const INFO = [
     { icon: "fa-envelope", label: "Email", value: "umarprogrammer24@gmail.com" },
 ];
 
-/* =========================================
-   RESUME DATA
-   Naya card chahiye to bas ek { ... } object add kar do.
-   2 se zyada cards hon to neeche dots khud aa jayenge.
-========================================= */
+
+
 const RESUME = {
     experience: [
         {
@@ -82,7 +79,7 @@ function Resume({ light }) {
                 My Resume
             </h2>
 
-            {/* Tabs */}
+            
             <div className="mt-8 flex items-center justify-center md:mt-10">
                 {TABS.map((t, i) => (
                     <button
@@ -105,7 +102,7 @@ function Resume({ light }) {
                 ))}
             </div>
 
-            {/* Cards */}
+           
             <div className="mt-10 flex flex-wrap justify-center gap-[30px] md:mt-14">
                 {visible.map((item, i) => (
                     <article
@@ -133,7 +130,7 @@ function Resume({ light }) {
                 ))}
             </div>
 
-            {/* Dots (sirf tab jab 2 se zyada cards hon) */}
+         
             {pages > 1 && (
                 <div className="mt-10 flex items-center justify-center gap-3">
                     {Array.from({ length: pages }, (_, i) => (
@@ -156,9 +153,7 @@ function Resume({ light }) {
     );
 }
 
-/* =========================================
-   STATS (numbers yahan se badlo)
-========================================= */
+
 const STATS = [
     { icon: "fa-briefcase", value: "3", label: "Years Experience" },
     { icon: "fa-thumbs-up", value: "21", label: "Done Projects" },
@@ -188,9 +183,8 @@ function Stats({ light }) {
     );
 }
 
-/* =========================================
-   SKILLS DATA
-========================================= */
+
+
 const SKILLS = [
     { name: "HTML", percentage: 90 },
     { name: "JAVASCRIPT", percentage: 80 },
@@ -217,12 +211,12 @@ function Skills({ light }) {
                         </span>
 
                         <div className="relative mt-8 h-[5px] w-full bg-[#414145]/40">
-                            {/* Filled Bar */}
+                            
                             <div
                                 className="relative h-full bg-[var(--accent)] transition-all duration-500"
                                 style={{ width: `${skill.percentage}%` }}
                             >
-                                {/* Percentage Badge / Tooltip */}
+                                
                                 <div className="absolute -top-9 right-0 translate-x-1/2 rounded-xs bg-[var(--accent)] px-2 py-1 text-xs font-bold text-white shadow-md after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-[var(--accent)]">
                                     {skill.percentage}%
                                 </div>
@@ -236,8 +230,7 @@ function Skills({ light }) {
 }
 
 function About({ light }) {
-    // CV download: pehle check karta hai ke file asli PDF hai, phir download karta hai.
-    // File na mile to koi popup nahi aata (sirf console mein likha jata hai).
+   
     const downloadCV = async () => {
         try {
             const res = await fetch(CV_URL);
@@ -293,7 +286,7 @@ function About({ light }) {
                         />
                     </div>
 
-                    {/* Details */}
+                   
                     <div className="w-full max-w-[680px]">
                         <p
                             className={`text-sm leading-[2] md:text-base ${light ? "text-[#252527]" : "text-[#f0f0f0]"
@@ -324,7 +317,7 @@ function About({ light }) {
                             ))}
                         </div>
 
-                        {/* Button center mein */}
+                      
                         <div className="mt-8 flex justify-center">
                             <button
                                 type="button"
@@ -337,14 +330,14 @@ function About({ light }) {
                     </div>
                 </div>
 
-                {/* My Resume */}
+               
                 <Resume light={light} />
             </section>
 
-            {/* Stats */}
+            
             <Stats light={light} />
 
-            {/* My Skills */}
+            
             <Skills light={light} />
         </>
     );
